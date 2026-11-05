@@ -1,0 +1,7 @@
+{
+  "ical_url": "PASTE-YOUR-SECRET-ICAL-ADDRESS-HERE",
+  "timezone": "",
+  "lookahead_days": 21,
+  "nudge_minutes": 15,
+  "show_titles": true
+}

@@ -1,0 +1,21 @@
+{
+  "checkin_minutes": 40,
+  "event_lead_minutes": 15,
+  "active_hours": [
+    "08:00",
+    "22:00"
+  ],
+  "sound": true,
+  "timezone": "",
+  "assistant_command": [
+    "claude",
+    "-p",
+    "--model",
+    "{model}",
+    "--allowedTools",
+    "{tools}"
+  ],
+  "assistant": "auto",
+  "local_model": "qwen3.5:4b",
+  "ollama_url": "http://127.0.0.1:11434"
+}

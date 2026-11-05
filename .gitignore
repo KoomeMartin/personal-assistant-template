@@ -1,0 +1,22 @@
+# secrets and personal config — never commit
+tools/notify.config.json
+tools/gcal_sync.config.json
+tools/gcal_state.json
+tools/gcal_cache.json
+tools/gcal_sync.log
+tools/feeds_cache.json
+tools/day_morning.stamp
+
+# generated applications (they contain your personal details)
+me/applications/
+
+# local state
+__pycache__/
+.chroma/
+.obsidian/workspace.json
+.obsidian/graph.json
+.DS_Store
+
+# what My Day spent and its saved suggestions (personal)
+tools/suggest_cache.json
+logs/ai-calls.log

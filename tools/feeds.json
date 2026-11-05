@@ -1,0 +1,9 @@
+{
+  "feeds": [
+    {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/"},
+    {"name": "Latent Space", "url": "https://www.latent.space/feed"},
+    {"name": "Import AI", "url": "https://importai.substack.com/feed"},
+    {"name": "Hacker News", "url": "https://hnrss.org/frontpage?points=150"}
+  ],
+  "interests": ["agents", "llm", "python", "productivity"]
+}

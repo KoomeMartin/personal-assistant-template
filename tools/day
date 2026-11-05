@@ -1,0 +1,3 @@
+#!/bin/sh
+# My Day from any terminal (macOS / Linux). Add this folder to your PATH, then type: day
+exec python3 "$(dirname "$0")/day.py" "$@"
