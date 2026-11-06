@@ -2,7 +2,6 @@
 """Try the assistant with a fictional person, then clear it for your own data.
 
   python tools/sample.py load    copy examples/alex/ into place, dated from today
-  python tools/sample.py inbox   drop the demo files (chat, brief, job post…) into inbox/ to ingest live
   python tools/sample.py clear   move the sample into archive/ and restore the blank templates
 
 `load` refuses to run once you've started filling in me/profile.md, so it can
@@ -65,6 +64,8 @@ def load():
 
 
 def inbox():
+    if not DEMO_INBOX.is_dir():
+        sys.exit("No demo files here (examples/demo-inbox/ is kept out of the public repo).")
     today = dt.date.today()
     names = []
     for src in sorted(DEMO_INBOX.iterdir()):

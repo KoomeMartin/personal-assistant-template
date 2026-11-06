@@ -99,11 +99,8 @@ To explore first with a fictional student, Alex (needs Python 3.9+):
 
 ```
 python tools/sample.py load     # Alex's profile, CV, todos, calendar and 10 linked notes
-python tools/sample.py inbox    # 5 messy files (chat, brief, job post…) to process
 python tools/sample.py clear    # Alex moves to archive/, blank templates come back
 ```
-
-[DEMO.md](DEMO.md) is a guided 20-minute walkthrough with Alex.
 
 ## Make it yours, in plain language
 
@@ -166,7 +163,7 @@ archive/           originals and anything removed (nothing is deleted)
 digests/           daily digests and weekly reviews
 logs/actions.md    every file change
 tools/             optional scripts: My Day, day command, sample loader, calendar sync
-examples/          Alex (sample person), demo inbox, blank templates
+examples/          Alex (sample person) and blank templates
 docs/              images and the My Day guide
 ```
 

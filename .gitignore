@@ -23,3 +23,7 @@ logs/ai-calls.log
 
 # the sample person after "sample.py clear"
 archive/sample-*/
+
+# demo material, kept on this laptop only
+DEMO.md
+examples/demo-inbox/
