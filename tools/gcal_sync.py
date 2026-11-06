@@ -261,6 +261,17 @@ def parse_ics(text, tz):
                     ev["status"] = pvalue.upper()
                 elif pname == "RRULE":
                     ev["rrule"] = parse_rrule(pvalue)
+                elif pname == "EXDATE":  # single occurrences deleted from a series
+                    for value in pvalue.split(","):
+                        try:
+                            when, allday = ical_dt(value, pparams, tz)
+                        except ValueError:
+                            continue
+                        ex = ev.setdefault("exdates", {"at": set(), "days": set()})
+                        if allday:
+                            ex["days"].add(when.date())
+                        else:
+                            ex["at"].add(when.astimezone(dt.timezone.utc))
                 elif pname == "RECURRENCE-ID":
                     ev["recurrence_id"], _ = ical_dt(pvalue, pparams, tz)
                 elif pname in ("DTSTART", "DTEND"):
@@ -301,10 +312,13 @@ def parse_ics(text, tz):
             starts = [ev["dtstart"]]
         ov = over.get(ev.get("uid", ""), {})
         duration = end_utc - start_utc
+        ex = ev.get("exdates", {"at": set(), "days": set()})
         for s in starts:
             if s.date() in ov:  # replaced by an overridden instance (local date)
                 continue
             s_utc = s.astimezone(dt.timezone.utc)
+            if s_utc in ex["at"] or s.date() in ex["days"]:  # deleted occurrence
+                continue
             result.append({**base, "start_utc": s_utc, "end_utc": s_utc + duration})
     for by_date in over.values():
         for ev in by_date.values():
@@ -447,8 +461,9 @@ def main():
     state = load_json(STATE_PATH, {"notified": {}, "morning": {}})
     nudged = state.setdefault("notified", {})
     mornings = state.setdefault("morning", {})
-    cutoff = (now - dt.timedelta(days=7)).isoformat()
-    nudged.update({k: v for k, v in nudged.items() if isinstance(v, str) and v >= cutoff})
+    cutoff = (now - dt.timedelta(days=7)).date().isoformat()
+    # rebuild (update() could only add keys), keeping the last 7 days of records
+    nudged = state["notified"] = {k: v for k, v in nudged.items() if isinstance(v, str) and v >= cutoff}
 
     nudge_min = int(cfg["nudge_minutes"])
     for ev in upcoming:
