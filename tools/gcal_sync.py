@@ -162,7 +162,13 @@ def parse_rrule(value):
 
 
 def expand_rrule(master, rule, window_start, window_end):
-    """Expand simple RRULEs. Complex rules fall back to the first occurrence."""
+    """Expand simple RRULEs. Complex rules fall back to the first occurrence.
+
+    master["start"] is DTSTART in the event's own zone (aware, with its TZID).
+    Stepping happens on that local wall clock, so a 09:00 meeting stays at
+    09:00 across daylight-saving changes and BYDAY uses the local weekday.
+    Results keep that zone; the caller converts them to UTC.
+    """
     freq = rule.get("FREQ", "").upper()
     try:
         interval = int(rule.get("INTERVAL", "1"))
@@ -175,7 +181,7 @@ def expand_rrule(master, rule, window_start, window_end):
     byday = [d for d in rule.get("BYDAY", "").split(",") if d in WEEKDAYS]
 
     occ = []
-    cur = master["start_utc"]
+    cur = master["start"]
     total = master.get("count_base", 0)  # occurrences already consumed
     guard = 0
     while guard < 800:
@@ -216,7 +222,7 @@ def expand_rrule(master, rule, window_start, window_end):
             except ValueError:  # Feb 29
                 nxt = cur.replace(year=cur.year + interval, day=28)
         else:
-            return [master["start_utc"]]  # unsupported rule: master only
+            return [master["start"]]  # unsupported rule: master only
 
         for c in candidates:
             if c > window_end:
@@ -289,15 +295,17 @@ def parse_ics(text, tz):
                 "start_utc": start_utc, "end_utc": end_utc}
         if "rrule" in ev:
             window_end = dt.datetime.now(dt.timezone.utc) + dt.timedelta(days=60)
-            starts = expand_rrule({"start_utc": start_utc}, ev["rrule"], window_start, window_end)
+            # expand on the event's own wall clock, then convert each start to UTC
+            starts = expand_rrule({"start": ev["dtstart"]}, ev["rrule"], window_start, window_end)
         else:
-            starts = [start_utc]
+            starts = [ev["dtstart"]]
         ov = over.get(ev.get("uid", ""), {})
         duration = end_utc - start_utc
         for s in starts:
-            if s.date() in ov:  # replaced by an overridden instance
+            if s.date() in ov:  # replaced by an overridden instance (local date)
                 continue
-            result.append({**base, "start_utc": s, "end_utc": s + duration})
+            s_utc = s.astimezone(dt.timezone.utc)
+            result.append({**base, "start_utc": s_utc, "end_utc": s_utc + duration})
     for by_date in over.values():
         for ev in by_date.values():
             result.append({"uid": ev.get("uid", ev["summary"]), "summary": ev["summary"],
