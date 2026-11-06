@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7d8590"/>
+    </marker>
+  </defs>
+  <rect width="900" height="560" rx="14" fill="#0f1117"/>
+  <text x="24" y="36" fill="#e6e8eb" font-size="19" font-weight="600">An assistant built from text files, not code</text>
+  <text x="24" y="58" fill="#8b929c" font-size="13">You write in plain language. A harness (an AI agent) reads the folder, follows its rules and writes back into it.</text>
+
+  <!-- you -->
+  <rect x="24" y="90" width="200" height="330" rx="12" fill="#161a22" stroke="#2c323d"/>
+  <text x="124" y="118" fill="#F4A62A" font-size="15" font-weight="600" text-anchor="middle">You</text>
+  <text x="124" y="140" fill="#8b929c" font-size="12" text-anchor="middle">talk, or drop files</text>
+  <g font-size="12.5" fill="#d5d9df">
+    <rect x="40" y="158" width="168" height="34" rx="8" fill="#1f2430"/><text x="52" y="180">"Process my inbox."</text>
+    <rect x="40" y="200" width="168" height="34" rx="8" fill="#1f2430"/><text x="52" y="222">"Tailor my CV for…"</text>
+    <rect x="40" y="242" width="168" height="34" rx="8" fill="#1f2430"/><text x="52" y="264">"Remember that…"</text>
+    <rect x="40" y="284" width="168" height="34" rx="8" fill="#1f2430"/><text x="52" y="306">"What's due this week?"</text>
+    <rect x="40" y="326" width="168" height="34" rx="8" fill="#1f2430"/><text x="52" y="348">"Write dates as 6 Nov."</text>
+  </g>
+  <text x="124" y="398" fill="#8b929c" font-size="12" text-anchor="middle">chats, PDFs, job posts → inbox/</text>
+
+  <!-- harness -->
+  <line x1="226" y1="255" x2="282" y2="255" stroke="#7d8590" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="286" y="170" width="170" height="170" rx="12" fill="#161a22" stroke="#3B82F6"/>
+  <text x="371" y="200" fill="#3B82F6" font-size="15" font-weight="600" text-anchor="middle">Harness</text>
+  <text x="371" y="222" fill="#d5d9df" font-size="12.5" text-anchor="middle">the AI agent</text>
+  <text x="371" y="252" fill="#a3aab4" font-size="12" text-anchor="middle">DeepSeek Harness</text>
+  <text x="371" y="270" fill="#a3aab4" font-size="12" text-anchor="middle">or Claude Code, Codex,</text>
+  <text x="371" y="288" fill="#a3aab4" font-size="12" text-anchor="middle">Gemini CLI, a local model</text>
+  <text x="371" y="318" fill="#8b929c" font-size="11.5" text-anchor="middle">swappable: the data stays</text>
+  <line x1="458" y1="230" x2="514" y2="230" stroke="#7d8590" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="486" y="222" fill="#8b929c" font-size="11" text-anchor="middle">reads</text>
+  <line x1="514" y1="285" x2="458" y2="285" stroke="#7d8590" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="486" y="302" fill="#8b929c" font-size="11" text-anchor="middle">writes</text>
+
+  <!-- the folder -->
+  <rect x="518" y="90" width="358" height="330" rx="12" fill="#161a22" stroke="#2c323d"/>
+  <text x="536" y="118" fill="#e6e8eb" font-size="15" font-weight="600">Your folder: plain markdown</text>
+  <g font-size="12.5">
+    <rect x="534" y="132" width="326" height="48" rx="8" fill="#1f2430"/>
+    <text x="548" y="152" fill="#E5484D" font-weight="600">Rules</text><text x="620" y="152" fill="#8b929c" font-family="Consolas, monospace" font-size="12">AGENTS.md</text>
+    <text x="548" y="170" fill="#a3aab4">cite sources, never delete, never invent</text>
+    <rect x="534" y="186" width="326" height="48" rx="8" fill="#1f2430" stroke="#9B59B6"/>
+    <text x="548" y="206" fill="#9B59B6" font-weight="600">Semantic layer</text><text x="664" y="206" fill="#8b929c" font-family="Consolas, monospace" font-size="12">schema.md</text>
+    <text x="548" y="224" fill="#a3aab4">types, relations, aliases, who writes what</text>
+    <rect x="534" y="240" width="326" height="48" rx="8" fill="#1f2430"/>
+    <text x="548" y="260" fill="#1ABC9C" font-weight="600">Skills</text><text x="620" y="260" fill="#8b929c" font-family="Consolas, monospace" font-size="12">skills/*.md</text>
+    <text x="548" y="278" fill="#a3aab4">step-by-step procedures, in English</text>
+    <rect x="534" y="294" width="326" height="48" rx="8" fill="#1f2430"/>
+    <text x="548" y="314" fill="#F4A62A" font-weight="600">Context + memory</text><text x="680" y="314" fill="#8b929c" font-family="Consolas, monospace" font-size="12">me/  memory.md</text>
+    <text x="548" y="332" fill="#a3aab4">who you are, lessons from your corrections</text>
+    <rect x="534" y="348" width="326" height="56" rx="8" fill="#1f2430" stroke="#2EAD5B"/>
+    <text x="548" y="368" fill="#2EAD5B" font-weight="600">Knowledge graph</text><text x="672" y="368" fill="#8b929c" font-family="Consolas, monospace" font-size="12">vault/  todos  calendar</text>
+    <text x="548" y="388" fill="#a3aab4">one note per thing, linked:  works_on:: [[project]]</text>
+  </g>
+
+  <!-- outputs -->
+  <line x1="697" y1="422" x2="697" y2="452" stroke="#7d8590" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="24" y="470" fill="#e6e8eb" font-size="14" font-weight="600">What you get from it</text>
+  <g font-size="12.5" fill="#d5d9df">
+    <rect x="24" y="484" width="200" height="52" rx="10" fill="#1f2430"/>
+    <text x="38" y="506">Answers with sources</text><text x="38" y="524" fill="#8b929c" font-size="11.5">or "not in your notes"</text>
+    <rect x="236" y="484" width="200" height="52" rx="10" fill="#1f2430"/>
+    <text x="250" y="506">CVs, cover letters, emails</text><text x="250" y="524" fill="#8b929c" font-size="11.5">every claim traced to a note</text>
+    <rect x="448" y="484" width="200" height="52" rx="10" fill="#1f2430"/>
+    <text x="462" y="506">Filed inbox, deadlines</text><text x="462" y="524" fill="#8b929c" font-size="11.5">digests, weekly reviews</text>
+    <rect x="660" y="484" width="216" height="52" rx="10" fill="#1f2430"/>
+    <text x="674" y="506">Your own tools on top</text><text x="674" y="524" fill="#8b929c" font-size="11.5">e.g. My Day (plain scripts)</text>
+  </g>
+</svg>

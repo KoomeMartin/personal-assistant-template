@@ -1,0 +1,26 @@
+Junior Machine Learning Engineer (graduate role) — GreenLeaf AgriTech (fictional sample)
+
+Location: hybrid, two days a week in the office
+Closing date: {{D+20}}
+Start: September {{Y+1}}
+
+About us
+GreenLeaf helps small farms use cheap sensors to save water. We turn soil,
+weather and irrigation data into simple advice farmers act on.
+
+What you'll do
+- Clean and analyse sensor data in Python (pandas)
+- Build and evaluate simple models (scikit-learn) that predict when fields need water
+- Explain results to farmers and field staff without jargon
+- Ship models into our product with the platform team
+
+What we look for
+- Python, pandas and scikit-learn
+- A project where you worked with real-world, messy data
+- Clear communication with non-technical people
+- Experience deploying to the cloud (AWS or GCP) and with Docker — nice to have
+- Final-year student or recent graduate
+
+How to apply
+A one-page CV and a short cover letter (max 300 words) telling us about one
+project you are proud of.

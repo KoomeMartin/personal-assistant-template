@@ -1,0 +1,17 @@
+CS330 Introduction to Machine Learning — Coursework 2 (fictional sample)
+
+Released: {{D-3}}
+Deadline: {{D+9}} 23:59, submit on the course page
+Weight: 20% of the module
+
+Task
+Train and compare two classifiers (one linear, one tree-based) on the provided
+"study habits" dataset to predict whether a student completes a weekly quiz.
+Report accuracy, precision and recall on the held-out test set, and explain
+which features matter most.
+
+Deliverables
+1. A Jupyter notebook that runs top to bottom.
+2. A report of at most 1,500 words.
+
+Individual work. Questions go to the Thursday drop-in, 16:00, Room A4.

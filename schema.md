@@ -37,12 +37,12 @@ These are the only relations allowed; add new ones here first.
 | `teaches` | person → course | Lecturer or TA of the course |
 | `takes` | me → course | You are enrolled |
 | `works_on` | person → project | Collaborator on a project |
-| `part_of` | task / event / document → course or project | Belongs to |
+| `part_of` | task / event / document / project → course or project | Belongs to |
 | `due_for` | task → course or project | Deliverable for |
 | `mentioned_in` | anything → document | Where a fact came from |
 | `inspired_by` | idea → anything | What sparked the idea |
-| `related` | idea → idea / project | Loose connection |
-| `requires` | opportunity → document or skill | What it asks for |
+| `related` | anything → anything | Loose connection |
+| `requires` | opportunity → document, person or skill | What it asks for (a referee is a person) |
 
 Any other link in a note body (`[[name]]`) means "related, unspecified".
 

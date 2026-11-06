@@ -2,6 +2,7 @@
 """Try the assistant with a fictional person, then clear it for your own data.
 
   python tools/sample.py load    copy examples/alex/ into place, dated from today
+  python tools/sample.py inbox   drop the demo files (chat, brief, job post…) into inbox/ to ingest live
   python tools/sample.py clear   move the sample into archive/ and restore the blank templates
 
 `load` refuses to run once you've started filling in me/profile.md, so it can
@@ -17,6 +18,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SAMPLE = ROOT / "examples" / "alex"
 BLANK = ROOT / "examples" / "blank"
+DEMO_INBOX = ROOT / "examples" / "demo-inbox"
+GRAPH = ROOT / "examples" / "obsidian" / "graph.json"
 TOKEN = re.compile(r"\{\{([DY])([+-]\d+)?\}\}")
 
 
@@ -51,9 +54,29 @@ def load():
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(fill((SAMPLE / rel).read_text(encoding="utf-8"), today), encoding="utf-8")
     log("create", "examples/alex → me/, vault/, todos.md, calendar.md", "loaded the fictional sample person")
+    graph = ROOT / ".obsidian" / "graph.json"
+    if not graph.exists():  # colour the Obsidian graph by note type (yours wins if you have one)
+        graph.parent.mkdir(exist_ok=True)
+        shutil.copy(GRAPH, graph)
+        log("create", ".obsidian/graph.json", "Obsidian graph coloured by note type")
     print(f"Loaded Alex, the sample person ({len(sample_files())} files). Open My Day with `day`, or ask your\n"
           "assistant: \"What's on today?\" or \"Tailor my CV for the Brightpath internship.\"\n"
           "When you're ready for your own data: python tools/sample.py clear")
+
+
+def inbox():
+    today = dt.date.today()
+    names = []
+    for src in sorted(DEMO_INBOX.iterdir()):
+        dest = ROOT / "inbox" / src.name
+        if dest.exists():
+            continue  # already there from an earlier run
+        dest.write_text(fill(src.read_text(encoding="utf-8"), today), encoding="utf-8")
+        names.append(src.name)
+    if names:
+        log("create", "inbox/ (" + ", ".join(names) + ")", "demo files to ingest")
+    print(f"Put {len(names)} demo files in inbox/: " + (", ".join(names) or "none (already there)") +
+          "\nNow ask your assistant: \"Process my inbox.\"")
 
 
 def clear():
@@ -77,4 +100,4 @@ def clear():
 
 
 if __name__ == "__main__":
-    {"load": load, "clear": clear}.get((sys.argv[1:] or ["help"])[0], lambda: print(__doc__))()
+    {"load": load, "inbox": inbox, "clear": clear}.get((sys.argv[1:] or ["help"])[0], lambda: print(__doc__))()

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="900" height="620" rx="14" fill="#0f1117"/>
+<text x="24" y="34" fill="#e6e8eb" font-size="17" font-weight="600">The sample person's knowledge graph</text>
+<text x="24" y="56" fill="#8b929c" font-size="13">Every dot is a markdown note. Every line is a relation from schema.md, written in the note as  relation:: [[other-note]]</text>
+<line x1="120" y1="125" x2="250" y2="210" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="156" y="158" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="185" y="170" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">part_of</text>
+<line x1="810" y1="340" x2="650" y2="440" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="700" y="380" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="730" y="393" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">part_of</text>
+<line x1="450" y1="520" x2="250" y2="210" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="346" y="417" width="87" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="390" y="430" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">inspired_by</text>
+<line x1="190" y1="535" x2="95" y2="330" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="110" y="422" width="66" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="142" y="436" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">requires</text>
+<line x1="95" y1="330" x2="250" y2="210" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="143" y="260" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="172" y="273" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">teaches</text>
+<line x1="650" y1="440" x2="650" y2="210" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="620" y="315" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="650" y="328" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">part_of</text>
+<line x1="330" y1="105" x2="250" y2="210" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="260" y="148" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="290" y="160" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">due_for</text>
+<line x1="330" y1="105" x2="120" y2="125" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="178" y="105" width="94" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="225" y="118" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">mentioned_in</text>
+<line x1="450" y1="320" x2="650" y2="210" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="528" y="255" width="45" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="550" y="268" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">takes</text>
+<line x1="450" y1="320" x2="250" y2="210" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="320" y="255" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="350" y="268" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">teaches</text>
+<line x1="450" y1="320" x2="650" y2="440" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="517" y="370" width="66" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="550" y="383" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">works_on</text>
+<line x1="450" y1="320" x2="250" y2="440" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="317" y="370" width="66" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="350" y="383" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">works_on</text>
+<line x1="450" y1="520" x2="650" y2="440" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="520" y="470" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="550" y="483" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">related</text>
+<line x1="250" y1="440" x2="190" y2="535" stroke="#3a404b" stroke-width="1.6"/>
+<rect x="190" y="478" width="59" height="18" rx="9" fill="#1b1f27" stroke="#3a404b"/>
+<text x="220" y="490" fill="#9aa3ad" font-size="11.5" text-anchor="middle" font-family="Consolas, monospace">related</text>
+<circle cx="250" cy="210" r="9" fill="#3B82F6"/>
+<text x="250" y="234" fill="#d5d9df" font-size="12.5" text-anchor="middle">data-structures</text>
+<circle cx="650" cy="210" r="9" fill="#3B82F6"/>
+<text x="650" y="234" fill="#d5d9df" font-size="12.5" text-anchor="middle">intro-to-machine-learning</text>
+<circle cx="120" cy="125" r="9" fill="#8E959E"/>
+<text x="120" y="149" fill="#d5d9df" font-size="12.5" text-anchor="middle">ds-assignment-3-brief</text>
+<circle cx="810" cy="340" r="9" fill="#9B59B6"/>
+<text x="810" y="364" fill="#d5d9df" font-size="12.5" text-anchor="middle">campus-ai-hackathon</text>
+<circle cx="450" cy="520" r="9" fill="#1ABC9C"/>
+<text x="450" y="544" fill="#d5d9df" font-size="12.5" text-anchor="middle">flashcards-from-lecture-notes</text>
+<circle cx="190" cy="535" r="9" fill="#E9407F"/>
+<text x="190" y="559" fill="#d5d9df" font-size="12.5" text-anchor="middle">brightpath-data-analyst-internship</text>
+<circle cx="95" cy="330" r="9" fill="#E5484D"/>
+<text x="95" y="354" fill="#d5d9df" font-size="12.5" text-anchor="middle">amina-okafor</text>
+<circle cx="250" cy="440" r="9" fill="#2EAD5B"/>
+<text x="250" y="464" fill="#d5d9df" font-size="12.5" text-anchor="middle">garden-sensors</text>
+<circle cx="650" cy="440" r="9" fill="#2EAD5B"/>
+<text x="650" y="464" fill="#d5d9df" font-size="12.5" text-anchor="middle">study-buddy-app</text>
+<circle cx="330" cy="105" r="9" fill="#FF8A00"/>
+<text x="330" y="129" fill="#d5d9df" font-size="12.5" text-anchor="middle">ds-assignment-3</text>
+<circle cx="450" cy="320" r="13" fill="#F4A62A"/>
+<text x="450" y="348" fill="#d5d9df" font-size="12.5" text-anchor="middle">Alex (you)</text>
+<circle cx="30" cy="596" r="6" fill="#F4A62A"/>
+<text x="41" y="600" fill="#a3aab4" font-size="12.5">you (me/)</text>
+<circle cx="133.8" cy="596" r="6" fill="#E5484D"/>
+<text x="144.8" y="600" fill="#a3aab4" font-size="12.5">person</text>
+<circle cx="216.0" cy="596" r="6" fill="#3B82F6"/>
+<text x="227.0" y="600" fill="#a3aab4" font-size="12.5">course</text>
+<circle cx="298.2" cy="596" r="6" fill="#2EAD5B"/>
+<text x="309.2" y="600" fill="#a3aab4" font-size="12.5">project</text>
+<circle cx="387.6" cy="596" r="6" fill="#FF8A00"/>
+<text x="398.6" y="600" fill="#a3aab4" font-size="12.5">task</text>
+<circle cx="455.40000000000003" cy="596" r="6" fill="#9B59B6"/>
+<text x="466.40000000000003" y="600" fill="#a3aab4" font-size="12.5">event</text>
+<circle cx="530.4000000000001" cy="596" r="6" fill="#E9407F"/>
+<text x="541.4000000000001" y="600" fill="#a3aab4" font-size="12.5">opportunity</text>
+<circle cx="648.6000000000001" cy="596" r="6" fill="#1ABC9C"/>
+<text x="659.6000000000001" y="600" fill="#a3aab4" font-size="12.5">idea</text>
+<circle cx="716.4000000000001" cy="596" r="6" fill="#8E959E"/>
+<text x="727.4000000000001" y="600" fill="#a3aab4" font-size="12.5">document</text>
+</svg>

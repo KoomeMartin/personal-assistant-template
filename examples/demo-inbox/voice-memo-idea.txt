@@ -1,0 +1,7 @@
+Voice memo transcript — recorded on the bus, {{D-1}} 08:14 (fictional sample)
+
+Okay, idea. What if Study Buddy could take a voice memo, like me talking
+through a lecture on the way home, and turn that into flashcards, the same way
+it does with typed notes? Half the class records lectures anyway. Could be
+the "one more thing" at the end of the hackathon demo. Ask Amina whether
+voice notes count as fair use of lecture content first.

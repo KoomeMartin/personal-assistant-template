@@ -1,0 +1,15 @@
+WhatsApp chat export — "Study Buddy 🚀" (fictional sample)
+
+[{{D-2}} 19:12] Priya: anyone else's laptop sounding like a jet engine 😂
+[{{D-2}} 19:13] Sam: every day
+[{{D-2}} 19:40] Alex: pushed the new quiz scheduler, spaced repetition now works across devices
+[{{D-1}} 09:05] Priya: Organisers just emailed: our demo slot moved from 13:00 to 14:30, same day, same hall
+[{{D-1}} 09:06] Sam: nice, more time to fix the login bug
+[{{D-1}} 09:20] Priya: Also the project submission form is due {{D+4}} at 18:00. Needs the repo link + a 2-minute backup video in case the wifi dies on demo day
+[{{D-1}} 09:21] Priya: Alex can you record the video? You know the scheduler best
+[{{D-1}} 09:30] Alex: yes, I'll do it
+[{{D-1}} 10:02] Sam: our mentor Dr Tomás Reyes has office hours {{D+2}} 15:00 in room C7 if we want feedback on the pitch
+[{{D-1}} 10:03] Priya: 👍
+[{{D-1}} 10:04] Sam: [sticker]
+[{{D-1}} 21:47] Priya: pilot update: 42 classmates using it now, up from 25!! averaging 3 quiz sessions a week
+[{{D-1}} 21:48] Alex: 🎉

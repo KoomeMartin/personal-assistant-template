@@ -20,3 +20,6 @@ __pycache__/
 # what My Day spent and its saved suggestions (personal)
 tools/suggest_cache.json
 logs/ai-calls.log
+
+# the sample person after "sample.py clear"
+archive/sample-*/

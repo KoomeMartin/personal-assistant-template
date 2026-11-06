@@ -1,0 +1,86 @@
+{
+  "collapse-filter": false,
+  "search": "-path:examples -path:archive -path:skills -path:docs -path:automations -path:inbox -path:logs -path:digests -file:README",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:vault/people",
+      "color": {
+        "a": 1,
+        "rgb": 15022389
+      }
+    },
+    {
+      "query": "path:vault/courses",
+      "color": {
+        "a": 1,
+        "rgb": 3381759
+      }
+    },
+    {
+      "query": "path:vault/projects",
+      "color": {
+        "a": 1,
+        "rgb": 3066993
+      }
+    },
+    {
+      "query": "path:vault/tasks",
+      "color": {
+        "a": 1,
+        "rgb": 16750848
+      }
+    },
+    {
+      "query": "path:vault/events",
+      "color": {
+        "a": 1,
+        "rgb": 10181046
+      }
+    },
+    {
+      "query": "path:vault/opportunities",
+      "color": {
+        "a": 1,
+        "rgb": 15277667
+      }
+    },
+    {
+      "query": "path:vault/ideas",
+      "color": {
+        "a": 1,
+        "rgb": 1752220
+      }
+    },
+    {
+      "query": "path:vault/documents",
+      "color": {
+        "a": 1,
+        "rgb": 9807270
+      }
+    },
+    {
+      "query": "path:me",
+      "color": {
+        "a": 1,
+        "rgb": 16034136
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -1,
+  "nodeSizeMultiplier": 1.3,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.5,
+  "repelStrength": 12,
+  "linkStrength": 1,
+  "linkDistance": 180,
+  "scale": 1,
+  "close": false
+}
